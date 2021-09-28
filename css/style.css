@@ -15,7 +15,7 @@ use the fonts in other ways in the font hierarchy etc. */
 /* change / delete some of these - note: all variables are listed twice */
 
 :root {
-  --bg-color: red;
+  /* --bg-color: red;
   --link-color: green;
   --link-hover-color: blue;
   --color-4: hotpink;
@@ -25,16 +25,16 @@ use the fonts in other ways in the font hierarchy etc. */
   --secondary-font: "Droid Serif", serif;
   --main-text-color: #000;
 
-  --white-space: 1rem;
+  --white-space: 1rem; */
 
-  --bg-color: #000;
+  --bg-color: #e8dcce;
   --link-color: #000;
   --link-hover-color: #000;
   --color-4: #000;
   --color-5: #000;
 
-  --primary-font: sans-serif;
-  --secondary-font: serif;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Playfair Display", serif;
   --main-text-color: #000;
 
   --white-space: 2rem;
@@ -60,24 +60,24 @@ footer {
 
 .full-width {
   background: var(--bg-color);
-  color: white;
+  color: rgb(0, 0, 0);
   width: 100%;
 }
 
 .header-wrapper h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: -2px;
   padding-right: 0.75em;
-  font-weight: bold;
-  color: white;
+  color: rgb(7, 7, 7);
 }
 
-.header-wrapper h2 {
-  font-size: 1.6em;
+.header-wrapper img {
+  /*font-size: 1.6em;
   color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+  font-weight: bold;*/
   margin: var(--white-space) 0;
+  width: 25%;
+  height: 180px;
 }
 
 .header-wrapper h3 {
@@ -99,9 +99,8 @@ section {
 }
 
 .section-heading {
-  font-style: italic;
   font-size: 1.3rem;
-  color: #777;
+  color: rgb(0, 0, 0);
   margin: 0.5rem 0;
 }
 
@@ -111,9 +110,10 @@ ul {
 }
 
 .swatches li {
-  margin-right: 5vw;
-  height: 15vw;
-  width: 20%;
+  margin-right: 4%;
+  height: 5.5vw;
+  width: 13%;
+  border-radius: 100%;
 }
 
 ul li:last-child {
@@ -121,45 +121,42 @@ ul li:last-child {
 }
 
 .color-swatch-1 {
-  background-color: var(--bg-color);
+  background-color: #000;
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: #ffff;
+  border: 1px solid #000;
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: #f4a5ae;
 }
 
 .color-swatch-4 {
-  background-color: var(--color-4);
+  background-color: #e8dcce;
 }
 
 .color-swatch-5 {
-  background-color: var(--color-5);
+  background-color: #ffca00;
+}
+
+.color-swatch-6 {
+  background-color: #e31c11;
 }
 
 .textures li {
-  height: 30vw;
-  width: 40%;
+  height: 19vw;
+  width: 19vw;
   margin-right: 5vw;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../5element.svg);
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../01rund.svg);
 }
 
 .images ul {
@@ -181,38 +178,35 @@ ul li:last-child {
 
 button {
   padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
+  border-radius: 50px;
+  border: 2px solid #e41c11;
+  width: 250px;
+  background: #fff;
   text-align: center;
   text-decoration: none;
   font: bold 1.25em/1 var(--primary-font);
   letter-spacing: 1px;
-  color: white;
+  color: #e41c11;
   text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
   cursor: pointer;
   /* margin: 0 1rem 0 0; */
-}
-
-.secondary-button {
-  background: var(--color-5);
 }
 
 button:focus,
 button:active,
 button:focus-within {
   outline: 0;
-  border-radius: 4px;
+  border-radius: 50px;
 }
 
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  background-color: #e41c11;
+  color: #fff;
 }
 
 button:active {
-  background-color: var(--bg-color);
+  background-color: #e41c11;
+  color: #fff;
 }
 
 .typography-main {
@@ -220,13 +214,14 @@ button:active {
 }
 
 .h1-sample {
+  font-family: var(--secondary-font);
   font-size: 2.4rem;
-  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
-  font-style: italic;
+  font-family: var(--primary-font);
   font-size: 1.25rem;
 }
 
@@ -269,8 +264,12 @@ p[class*="font-details-"] {
 }
 
 .adjectives ul {
-  font-size: 2rem;
+  font-size: 1.8rem;
   opacity: 0.5;
+  color: #f4a5ae;
+  font-family: "Abril fatface", serif;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
 
 .adjectives ul {
@@ -289,13 +288,13 @@ footer {
   }
 
   .swatches li {
-    margin-right: 3%;
-    height: 10vw;
-    width: 20%;
+    margin-right: 4%;
+    height: 5.5vw;
+    width: 13%;
   }
 
   .textures li {
-    height: 15vw;
+    height: 19vw;
   }
 }
 
